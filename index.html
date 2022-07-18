@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/styles.css"/>
+    <link rel="stylesheet" href="assets/styles.css" />
     <title>Contador</title>
 </head>
+
 <body>
 
     <h1>Contador</h1>
@@ -16,52 +18,60 @@
         <button id="subtracao" name="subtrair" onclick="decrement()">-</button>
         <span id="Numero_Atual">0</span>
         <button id="soma" name="adicionar" onclick="increment()">+</button>
-        
+
     </div>
 
     <script src="assets/script.js"></script>
-    
-    <script>
-            var obj = document.getElementById("Numero_Atual");
-             
 
-           function cor_negativo(){   
+    <script>
+        var obj = document.getElementById("Numero_Atual");
+
+        //Função que valida o valor negativo para inserir a cor vermelha no numero.
+        function cor_negativo() {
 
             if (Numero_Atual < 0) {
-                
-                obj.style.color="red";
-                
 
-             }else {
-                   obj.style.color="black";
+                obj.style.color = "red";
 
-            console.log("teste");          
-            
-}
-           }
 
-             function cor_positivo(){   
+            } else {
+                obj.style.color = "black";
 
-             if (Numero_Atual > 0) {
-    
-             obj.style.color="#00ffff";
+                console.log("teste");
 
-}  else {
+            }
+        }
+        //Função que valida o valor negativo para inserir a cor verde no numero.
+        function cor_positivo() {
 
-    obj.style.color="red";
+            if (Numero_Atual > 0) {
 
-}
+                obj.style.color = "#00ffff";
 
-console.log("teste");          
+            } else {
 
-}
+                obj.style.color = "red";
 
-            document.getElementById("subtracao").addEventListener("click",cor_negativo);
-            document.getElementById("subtracao").addEventListener("click",cor_positivo);
-            // verifica
-            document.getElementById("soma").addEventListener("click",cor_negativo);
-            document.getElementById("soma").addEventListener("click",cor_positivo);
+            }
+
+            //console.log("teste");
+
+        }
+
+        //Verifica evento de clique no botão com id = subtracao, e chama a função cor_negativo
+        document.getElementById("subtracao").addEventListener("click", cor_negativo);
+        //Verifica evento de clique no botão com id = subtracao, e chama a função cor_positivo (isso é para que se caso a pessoa clique na soma ele 
+        //mantenha a cor vermelha)
+        document.getElementById("subtracao").addEventListener("click", cor_positivo);
+
+
+        //Verifica evento de clique no botão com id = soma, e chama a função cor_negativo
+        document.getElementById("soma").addEventListener("click", cor_negativo);
+        //Verifica evento de clique no botão com id = soma, e chama a função cor_positivo (isso é para que se caso a pessoa clicar no botão de subtração ele 
+        //mantenha a cor verde)
+        document.getElementById("soma").addEventListener("click", cor_positivo);
     </script>
-    <!-- <script src="assets/script.js"> </script> !-->
+
 </body>
+
 </html>
