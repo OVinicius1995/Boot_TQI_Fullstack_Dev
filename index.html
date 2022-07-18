@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles.css"/>
+    <title>Contador</title>
+</head>
+<body>
+
+    <h1>Contador</h1>
+    <p>Clique no botão para alterar o valor</p>
+
+    <div id="counter">
+        <button id="subtracao" name="subtrair" onclick="decrement()">-</button>
+        <span id="Numero_Atual">0</span>
+        <button id="soma" name="adicionar" onclick="increment()">+</button>
+        
+    </div>
+
+    <script src="assets/script.js"></script>
+    
+    <script>
+            var obj = document.getElementById("Numero_Atual");
+             
+
+           function cor_negativo(){   
+
+            if (Numero_Atual < 0) {
+                
+                obj.style.color="red";
+                
+
+             }else {
+                   obj.style.color="black";
+
+            console.log("teste");          
+            
+}
+           }
+
+             function cor_positivo(){   
+
+             if (Numero_Atual > 0) {
+    
+             obj.style.color="#00ffff";
+
+}  else {
+
+    obj.style.color="red";
+
+}
+
+console.log("teste");          
+
+}
+
+            document.getElementById("subtracao").addEventListener("click",cor_negativo);
+            document.getElementById("subtracao").addEventListener("click",cor_positivo);
+            // verifica
+            document.getElementById("soma").addEventListener("click",cor_negativo);
+            document.getElementById("soma").addEventListener("click",cor_positivo);
+    </script>
+    <!-- <script src="assets/script.js"> </script> !-->
+</body>
+</html>
