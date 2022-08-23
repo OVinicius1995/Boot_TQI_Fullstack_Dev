@@ -8,6 +8,8 @@
 
 
 
-Imagem do projeto:
+# Imagem do projeto:
 
-<img src="https://i.ibb.co/pRq6s9y/Contador.png" alt="Contador" border="0">
+
+
+<img width="" align="center" src="https://i.ibb.co/pRq6s9y/Contador.png">
